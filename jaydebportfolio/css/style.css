@@ -1,0 +1,222 @@
+body {
+  background-color: #0d1117;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.blur-header {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.navbar .nav-link {
+  color: #ccc !important;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #00e0ff !important;
+}
+
+.content-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(30px);
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.content-section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero */
+#home {
+  background: radial-gradient(circle at top left, #0b1620, #0a0f16 80%);
+  text-align: center;
+  position: relative;
+}
+
+.glow-bg {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 224, 255, 0.2), transparent 70%);
+  filter: blur(120px);
+  animation: floatGlow 10s ease-in-out infinite alternate;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translate(-50%, 0px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, 40px);
+    opacity: 0.4;
+  }
+}
+
+.hero-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #00e0ff;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+.name-title {
+  font-size: 2.6rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.dynamic-role {
+  font-size: 1.4rem;
+  color: #00e0ff;
+}
+
+.hero-desc {
+  max-width: 700px;
+  margin: 15px auto;
+  line-height: 1.8;
+  color: #c6c6c6;
+}
+
+/* Buttons */
+.btn-glow,
+.btn-outline-glow {
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-glow {
+  background: linear-gradient(90deg, #00e0ff, #00bcd4);
+  color: #0d1117;
+  border: none;
+}
+
+.btn-outline-glow {
+  border: 1px solid #00e0ff;
+  color: #00e0ff;
+}
+
+.btn-outline-glow:hover {
+  background: #00e0ff;
+  color: #0d1117;
+}
+
+/* About */
+#about {
+  background: radial-gradient(circle at top left, #0c1420, #0a0f16 85%);
+}
+
+.about-box {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 15px;
+  padding: 50px 30px;
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.15);
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #00e0ff;
+  box-shadow: 0 0 40px rgba(0, 224, 255, 0.25);
+  transition: 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0, 224, 255, 0.4);
+}
+
+#about p {
+  color: #c7c7c7;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+
+/* Skills */
+.skills-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #00e0ff;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #00e0ff;
+  color: #0d1117;
+  transform: scale(1.1);
+}
+
+/* Education */
+.edu-timeline {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  width: 260px;
+  border: 1px solid rgba(0, 224, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.1);
+  transition: 0.4s;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  border-color: #00e0ff;
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.4);
+}
+
+/* Projects */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(0, 224, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.1);
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #00e0ff;
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.4);
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid rgba(0, 224, 255, 0.2);
+  color: #999;
+}
